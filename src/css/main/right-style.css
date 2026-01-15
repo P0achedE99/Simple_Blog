@@ -1,0 +1,150 @@
+.title-text {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 85%;
+  position: relative;
+}
+
+.div-h1 {
+  position: relative;
+}
+
+.div-h2 {
+  position: relative;
+}
+
+.div-h1>h1 {
+  font-size: 60px;
+}
+
+.div-h2>h2 {
+  font-size: 40px;
+}
+
+.h1-yinYing {
+  z-index: -1;
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  font-size: 50px;
+  color: black;
+}
+
+.h2-yinYing {
+  z-index: -1;
+  top: 3px;
+  left: 5px;
+  position: absolute;
+  color: black;
+}
+
+.web-media-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 180px;
+}
+
+.media-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.media-title {
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.media-id {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.media-link {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.about-box {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+}
+
+.about-box>h1 {
+  margin-left: 30px;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.about-box>p {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+.plan-box {
+  margin-top: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 97%;
+  padding: 10px;
+}
+
+.plan-box>h1 {
+  margin-left: 30px;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.plan-box>p {
+  font-size: 20px;
+  align-self: flex-start;
+  margin-left: 60px;
+}
+
+.code-studybox {
+  margin-top: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.stu-leftbox{
+  border-radius: 20px;
+  width: 45%;
+  height: 200px;
+}
+.stu-rightbox{
+  border-radius: 20px;
+  width: 45%;
+  height: 200px;
+}
+.stu-h1{
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+.stu-p{
+  font-size: 20px;
+  margin-left: 20px;
+}
