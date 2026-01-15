@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:名称空间
+    id:sql语句唯一表示
+    result
+-->
+<mapper namespace="com.qingcen.poachedegg.myblog.mapper.UserMapper">
+    <resultMap id="userResultMap" type="user">
+        <result column="user_account" property="userAccount"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+    </resultMap>
+
+    <select id="isExistence" resultMap="userResultMap">
+        select *
+        from tb_user
+        <where>
+<!--            唯一标识-->
+            <if test="id != null">
+                and id = #{id}
+            </if>
+<!--            账号-->
+            <if test="userAccount != null and userAccount != ''">
+                and user_account = #{userAccount}
+            </if>
+<!--            用户名-->
+            <if test="userName != null and userName != ''">
+                and user_name = #{userName}
+            </if>
+<!--            密码-->
+            <if test="userPassword != null and userPassword != ''">
+                and user_password = #{userPassword}
+            </if>
+<!--            权限组-->
+            <if test="permission != null">
+                and permission = #{permission}
+            </if>
+        </where>
+        ;
+    </select>
+
+    <select id="IsDuplicateUser" resultMap="userResultMap">
+        SELECT *
+        FROM tb_user
+        WHERE
+        user_account = #{userAccount} OR user_name = #{userName}
+    </select>
+
+    <insert id="addUser">
+        insert into tb_user
+        (user_account, user_name, user_password, permission)
+        VALUE
+        (#{userAccount},#{userName},#{userPassword},'0');
+    </insert>
+</mapper>

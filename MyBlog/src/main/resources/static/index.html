@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="./src/css/main/box.css">
+  <link rel="stylesheet" href="./src/css/main/right-style.css">
+  <link rel="stylesheet" href="./src/css/main/left-style.css">
+  <link rel="stylesheet" href="./src/css/main/nav.css">
+  <link rel="stylesheet" href="./src/css/main/login.css">
+  <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="back-login">
+        X
+      </div>
+      <div class="box-header">登陆</div>
+        <form action="javascript:;" class="login-form">
+          <div class="input-box">
+          <span class="login-text">账号</span>
+          <input class="account-input" type="text" id="account" placeholder=" 账号">
+          </div>
+          <div class="input-box">
+          <span class="login-text">密码</span>
+          <input class="password-input" type="password" id="pwd" placeholder=" 密码">
+          </div>
+          <div class="input-box uname-inputbox">
+          <span class="login-text">名称</span>
+          <input class="username-input" type="text" id="username" placeholder=" 用户名">
+          </div>
+          <button class="signin-btn">登录</button>
+          <div class="reg-btn">注册账号</div>
+        </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="total-box">
+      <div class="nav-box glass-container">
+        <div class="nav-titlebox">
+          <div class="nav-title">黄景豪的博客</div>
+        </div>
+        <ul>
+          <li>
+            <div class="nav-div"><a href="#introduce">介绍</a></div>
+          </li>
+          <li>
+            <div class="nav-div"><a href="">文章</a></div>
+          </li>
+          <li>
+            <div class="nav-div"><a href="#about">关于</a></div>
+          </li>
+          <li>
+            <div class="nav-div" id="lgrg-btn"><a href="#">登录&注册</a></div>
+          </li>
+          <li>
+            <div class="nav-div"><a href="./management.html">管理</a></div>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-touchbox"></div>
+      <div class="MainBox" id="introduce">
+        <div class="background"></div>
+
+        <div class="left-box glass-container">
+          <div class="head-box">
+            <img class="head-img" src="./src/img/PoachedEgg.png">
+          </div>
+
+          <div class="introduce-box">
+            <div class="introduce-nametext">PoachedEgg</div>
+            <div class="sign-box">
+              <div class="signature"></div>
+              <div class="cursor">|</div>
+            </div>
+            <hr class="introduce-hr">
+            <div class="school-text">
+              <p>台州职业技术学院</p>
+              <p>计应2532 学生</p>
+            </div>
+            <hr class="introduce-hr">
+            <div class="school-text">
+              <p>西安青岑网络科技有限公司</p>
+              <p>股东 监事</p>
+            </div>
+            <hr class="introduce-hr">
+            <div class="time-box">
+              <div class="timer-display"></div>
+              <div class="date-display"></div>
+            </div>
+            <hr class="introduce-hr">
+            <div class="connectme-box">
+              <h1>联系我</h1>
+              <p>QQ:1474914588</p>
+              <p>WeChat:sst320</p>
+            </div>
+            <hr class="introduce-hr">
+            <div class="computer-box">
+              <h1>个人主机配置:</h1>
+              <p>CPU:I7-13700F</p>
+              <p>GPU:RTX-4070</p>
+              <p>Ram:DDR4 32G x2</p>
+              <p>Disk:5.2Tb</p>
+            </div>
+            <hr class="introduce-hr">
+          </div>
+
+          <div class="message-board-box">
+            <h1>留言板:</h1>
+            <div class="message-display-box">
+              <!-- <div class="message-box">
+              <span class="message-name">老王</span>
+              <div class="message-text">这是测试这是测试这是测试这是测试这是测试这是测试这是测试这是测试这是测试这是测试</div>
+            </div> -->
+            </div>
+            <div class="message-tool-box">
+              <form action="javascript:; class="message-form">
+                <input type="text" name="text" class="message-input-text" placeholder="文字">
+                <button class="submit-btn">发送</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-box">
+          <div class="title-text">
+            <div class="div-h1">
+              <h1 class="rainbow-text">Hello</h1>
+              <h1 class="h1-yinYing">Hello</h1>
+            </div>
+            <div class="div-h2">
+              <h2 class="rainbow-text">I'm HuangJinghao</h2>
+              <h2 class="h2-yinYing">I'm HuangJinghao</h2>
+            </div>
+          </div>
+
+          <div class="web-media-box">
+            <div class="media-box glass-container">
+              <p class="media-title" style="color: rgb(255, 100, 126); text-shadow: 2px 2px 2px black;">BiliBili</p>
+              <p class="media-id">家有亿堆鼠的荷包蛋</p>
+              <a href="https://space.bilibili.com/313628577" target="_blank" class="media-link rainbow-text">点此前往</a>
+            </div>
+            <div class="media-box glass-container">
+              <p class="media-title" style="color: rgb(255, 185, 54); text-shadow: 2px 2px 2px black;">DouYin</p>
+              <p class="media-id">荷包蛋_PoachedEgg</p>
+              <a href="https://www.douyin.com/user/MS4wLjABAAAA9NLVNL9h68Fd8gAIK9znM2oWRcq1fQOJ68EosFE5ZoA"
+                target="_blank" class="media-link rainbow-text">点此前往</a>
+            </div>
+            <div class="media-box glass-container">
+              <p class="media-title" style="color: rgb(59, 255, 131); text-shadow: 2px 2px 2px black;">CTF靶场</p>
+              <p class="media-id">青岑CTF</p>
+              <a href="#" target="_blank" class="media-link rainbow-text">点此前往</a>
+            </div>
+          </div>
+
+          <div class="plan-box glass-container">
+            <h1>近期事件:</h1>
+            <p>2025.12.26|西安青岑网络科技有限公司成立</p>
+            <p>2025.11.26|服务器正式部署</p>
+          </div>
+
+          <div class="code-studybox">
+            <div class="stu-leftbox glass-container">
+              <h1 class="stu-h1">计划或正在学习的内容:</h1>
+              <p class="stu-p">AJAX</p>
+              <p class="stu-p">Vue</p>
+              <p class="stu-p">Springboot</p>
+              <p class="stu-p">Node.js</p>
+              <p class="stu-p">SpringCloud</p>
+            </div>
+            <div class="stu-rightbox glass-container">
+              <h1 class="stu-h1">已经学习的内容:</h1>
+              <p class="stu-p">Java</p>
+              <p class="stu-p">Html</p>
+              <p class="stu-p">Css</p>
+              <p class="stu-p">JavaScript</p>
+              <p class="stu-p">SQL语言规范</p>
+            </div>
+          </div>
+
+          <div class="about-box glass-container" id="about">
+            <h1>关于本站:</h1>
+            <p>集成前端三剑客 HTML CSS JavaScript AJAX</p>
+            <p>后端 使用SpringBoot Mybatis MySQL Druid连接池</p>
+            <p>主体布局使用Flex弹性布局并结合定位实现</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/js/main/lgrg.js"></script>
+    <script src="./src/js/main/timer.js"></script>
+    <script src="./src/js/main/nav.js"></script>
+    <script src="./src/js/main/message.js"></script>
+    <script src="./src/js/main/loadmessage.js"></script>
+    <script src="./src/js/main/signature.js"></script>
+</body>
+
+</html>

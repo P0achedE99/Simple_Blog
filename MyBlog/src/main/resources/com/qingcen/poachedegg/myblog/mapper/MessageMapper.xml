@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:名称空间
+    id:sql语句唯一表示
+    result
+-->
+<mapper namespace="com.qingcen.poachedegg.myblog.mapper.MessageMapper">
+    <resultMap id="messageResultMap" type="message">
+        <result column="user_name" property="userName"/>
+    </resultMap>
+    <insert id="addMessage">
+        insert into tb_message
+        (user_name, message)
+        VALUE
+        (#{userName},#{message});
+    </insert>
+
+    <select id="findAll" resultMap="messageResultMap">
+        select *
+        from
+        tb_message;
+    </select>
+
+    <select id="findUsers" resultMap="messageResultMap">
+        select *
+        from tb_message
+        where
+        <!--            用户名-->
+        <if test="userName != null and userName != ''">
+            user_name = #{userName}
+        </if>
+        ;
+    </select>
+
+    <delete id="deleteById">
+        delete
+        from tb_message
+        where
+        id = #{id}
+    </delete>
+
+    <update id="updateById">
+        update
+        tb_message set
+        message = #{message}
+        where
+        id = #{id}
+    </update>
+
+</mapper>

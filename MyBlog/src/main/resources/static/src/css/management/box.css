@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../img/manageBackGround.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.glass-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.089);
+}
+
+.rainbow-text {
+  background-image: linear-gradient(45deg,
+      rgb(158, 208, 255),
+      rgb(236, 191, 246),
+      rgb(228, 198, 255),
+      rgb(192, 239, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 50px;
+  display: flex;
+}
+
+.title-text {
+  margin-left: 50px;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.user-permission {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.userName-text {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.user-ID {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.managebox {
+  overflow-y: scroll;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border-radius: 20px; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 800px;
+  height: 700px;
+  align-items: center;
+
+  &::-webkit-scrollbar {
+    /* 设置滚动条的宽度 */
+    width: 6px;
+  }
+
+  /* 滚动条轨道 - 背景颜色/白底 */
+  &::-webkit-scrollbar-track {
+    background: #d1f3ff;
+    border-radius: 5px;
+  }
+
+  /* 滚动条的滑块部分 */
+  &::-webkit-scrollbar-thumb {
+    background: rgba(144, 147, 153, .2);
+    border-radius: 10px;
+  }
+
+  /* 当鼠标悬停在滚动条滑块上时改变颜色 */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(144, 147, 153, .4);
+  }
+}
+
+.message-box {
+  font-size: 25px;
+  padding: 10px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.message-content {
+  margin-left: 10px;
+  overflow: hidden;
+  font-weight: 50px;
+  white-space: nowrap;
+}
+
+.message {
+  display: flex;
+  width: 80%;
+}
+
+.toolbox {
+  white-space: nowrap;
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  cursor: pointer;
+}
+
+.update-btn {
+  cursor: pointer;
+}
